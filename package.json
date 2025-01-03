@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tailwindcss build ./src/css/fjell.css -o ./public/css/fjell.css",
-    "prod": "NODE_ENV=production postcss build ./src/css/fjell.css -o ./public/css/fjell.css",
-    "watch": "onchange 'tailwind.config.js' './src/**/*.css' -- npm run build"
+    "watch": "tailwindcss -i ./src/css/fjell.css -o ./public/css/fjell.css --watch",
+    "build": "tailwindcss -i ./src/css/fjell.css -o ./public/css/fjell.css --minify"
   },
   "keywords": [],
   "author": "",
